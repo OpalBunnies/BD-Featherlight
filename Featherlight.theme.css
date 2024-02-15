@@ -9,9 +9,16 @@
  */
 
 /* Pull layout changes from GitHub */
-@import url(https://opalbunnies.github.io/BD-Featherlight/Source-Featherlight.theme.css);
+@import url(https://opalbunnies.github.io/BD-Featherlight/Featherlight.theme.css);
+/* Pull Font from GoogleAPI */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
 /* User customizable settings - DO NOT CHANGE VARIABLE NAMES */
-:root{
-	
+:root {
+	--featherlight-icon: url('https://media.discordapp.net/attachments/884535641151528992/1207433348994301993/tokenRula.png?ex=65dfa0ef&is=65cd2bef&hm=e6670f8b83a881f6443ab13ccb34aa9c6239d193cbeb1c3ec22076ca49b06fbc&=&format=webp&quality=lossless&width=670&height=670');
+}
+
+/* Custom Icon */
+.childWrapper__01b9c path{
+fill: transparent;	
 }
