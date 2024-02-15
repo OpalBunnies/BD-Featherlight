@@ -1,14 +1,94 @@
+/* Pull layout changes from GitHub */
+@import url(https://opalbunnies.github.io/BD-Featherlight/Source-Featherlight.theme.css);
+/* Pull Font from GoogleAPI */
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
-:root {
-	--featherlight-icon: url('https://media.discordapp.net/attachments/884535641151528992/1207433348994301993/tokenRula.png?ex=65dfa0ef&is=65cd2bef&hm=e6670f8b83a881f6443ab13ccb34aa9c6239d193cbeb1c3ec22076ca49b06fbc&=&format=webp&quality=lossless&width=670&height=670');
+/*********** GUILD DROPDOWN ***********/
+/* In Planning. */
+
+
+/* Increase "Direct Messages" Button, and Enlarge/Fit New Icon */
+.listItem_fa7b36 .listItemWrapper__1f93b .wrapper__3af0b .svg_ad7356 {
+	background: url(https://opalbunnies.github.io/BD-Featherlight/FeatherlightIcon.png) center/cover no-repeat;
+	position: absolute;
+	border-radius: 50px;
+	z-index: 2;
+	min-width: 101px !important;
+	min-height: 101px !important;
+	padding: 3px;
+	background-size: fit;
+	overflow: visible;
 }
 
-.childWrapper__01b9c path{
+/* Override Discord Direct Messages Icon with Featherlight Icon */
+.wrapper_d281dd .childWrapper__01b9c::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    z-index: 3 !important;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Override Discord Direct Messages Hover */
+.wrapper_d281dd .childWrapper__01b9c:hover::before { 
+    background: url(https://opalbunnies.github.io/BD-Featherlight/FeatherlightIconFull.png) center/cover no-repeat;
+    background-size: 105%;
+    z-index: 2 !important;
+    opacity: 1;
+}
+
+/* Remove Default Discord Highlight on "Direct Messages" Highlight */
+.listItemWrapper__1f93b .svg_ad7356 path {
 	fill: transparent;
 }
-.childWrapper__01b9c {
-	background: url(https://opalbunnies.github.io/BD-Featherlight/tokenRula-DeepPurple.png);
-	min-width: 75px;
-	min-height: 75px;
-}	
+ 
+/* Increase Sidebar Width - 125px Looks Best */
+.wrapper_a7e7a8 {
+	width: 130px; !important;
+}
+
+/* Increase DM/Server Seperator Bar Size */
+.guildSeparator_dcb3cc {
+	margin-top: 60px;
+	margin-bottom: 0px;
+	margin-left: 50px;
+	min-width: 100px;
+	height: 5px;
+	border-radius: 25px;
+	background-color: #bb00ff;
+}
+
+/* Stack Servers (Guilds) into 2 Columns */
+[aria-label="Servers"] {
+	left: -8px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 8px;
+	position: relative;
+	padding: 5px;
+	z-index: 1;
+}
+
+
+/* Move "Unread Pill" */
+[aria-label="Servers"] .item_f9d377 {
+	position: relative;
+	top: 0px;
+	left: 8px;
+
+	
+	background-color: #bb00ff;
+	border-radius: 50px;
+	border-width: 3px;
+
+	z-index: 2;
+}
+
+/*
+[aria-label="Servers"] .wrapper_d281dd::before {
+	background: transparent;
+	z-index: 1;
+}

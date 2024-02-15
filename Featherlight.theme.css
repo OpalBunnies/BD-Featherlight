@@ -1,7 +1,7 @@
 /** Metadata
  * @name Featherlight
  * @author OpalBunnies
- * @version 0.1.2
+ * @version 0.2.1
  * @description BetterDiscord Theme featuring purple gradients derived from the color palette of a DND character, and her tabletop token used on the Roll20 website. Easily customizable.
  * @authorId 703503000139858042
  * @source https://github.com/OpalBunnies/BD-Featherlight
@@ -13,7 +13,3 @@
 /* Pull Font from GoogleAPI */
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
-/* User customizable settings - DO NOT CHANGE VARIABLE NAMES */
-:root {
-	
-}
